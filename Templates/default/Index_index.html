@@ -1,0 +1,732 @@
+<include file="Public:head" />
+<div class="banner">
+
+ <div class="">
+
+
+  <!--所有的新闻单页列表信息-->
+
+  <showad cid="1">
+  <div class="banner01" style="background: rgba(0, 0, 0, 0) url({$field.pic}) no-repeat scroll center center / cover; height: 926px;"></div>
+  </showad>
+
+ </div>
+ <div class="banner-nr">
+  <div class="head clearfix">
+   <div class="logo">
+    <a href="/">
+
+     <!--主要用于获取单条code信息，比如页脚，logo信息-->
+     <img src="__ROOT__/{$Think.Config.cfg_logo}" alt="">
+
+
+    </a>
+   </div>
+   <div class="head-zyw">
+
+    <a class="head-zyw-a01" href="/?t=en">English</a>
+
+   </div>
+   <div class="nav">
+    <ul class="clearfix">
+     <li class="wow fadeInLeft animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+      <a href="/">首页</a></li>
+     <?php $i=2;?>
+     <channel type='top' >
+     <li class="wow fadeInLeft animated" data-wow-delay="0.{$i}s" style="visibility: visible; animation-delay: 0.{$i}s; animation-name: fadeInLeft;">
+      <if condition="$field['cname_en'] neq 'news'">
+       <a href="/#{$field.keywords}" >
+        <else />
+        <a  href="{$field.url}" >
+      </if>
+       {$field.cname}</a>
+     </li>
+      <?php $i++;?>
+     </channel>
+
+    </ul>
+   </div>
+  </div>
+
+  <div class="banner-zi wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+   <h2>分布式智能金融平台</h2>
+   <p>智能金融＝智能众筹＋交易所＋Token银行</p>
+   <ul class="clearfix">
+    <li><a href="javascript:void (0);" target="_blank">GIT-Hub</a></li>
+    <li><a href="javascript:void (0);" target="_blank">BLOCK-Explorer</a></li>
+   </ul>
+  </div>
+
+ </div>
+ <div class="banner-fx wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+  <ul class="clearfix">
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_04.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_05.png"> </a></li>
+   <li class="banner-fxwx"><a href="javascript:void (0);"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_06.png"> </a></li>
+   <li class="banner-fxqq"><a href="javascript:void (0);"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_07.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_08.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_09.png"> </a></li>
+  </ul>
+ </div>
+</div>
+
+
+<div class="sj-banner">
+
+ <div class="">
+
+
+  <!--所有的新闻单页列表信息-->
+
+  <showad cid="1">
+  <div class="banner01" style="background: rgba(0, 0, 0, 0) url(&quot;{$field.pic}&quot;) no-repeat scroll center center / cover; height: 926px;"></div>
+  </showad>
+
+ </div>
+
+ <div class="sj-banner-zi">
+  <h2>分布式智能金融平台</h2>
+  <p>智能金融＝智能众筹＋交易所＋Token银行</p>
+ </div>
+
+ <div class="sj-banner-an">
+  <ul class="clearfix">
+   <li><a href="javascript:void (0);" target="_blank">GIT-Hub</a></li>
+   <li><a href="javascript:void (0);" target="_blank">BLOCK-Explorer</a></li>
+  </ul>
+ </div>
+
+ <div class="sj-banner-fx">
+  <ul class="clearfix">
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_04.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_05.png"> </a></li>
+   <li class="banner-fxwx"><a href="javascript:void (0);"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_06.png"> </a></li>
+   <li class="banner-fxqq"><a href="javascript:void (0);"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_07.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_08.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_09.png"> </a></li>
+  </ul>
+ </div>
+
+</div>
+
+
+<div class="sj-gs wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+
+ <div class="sj-gs01" style="">
+
+  <p>
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+  </p>
+  <p>FinChain旨在利用区块链和人工智能技术，聚合社区力量，基于智能合约，打造一个集数字资产发行，交易和管理等功能的全球智能金融平
+   台。FinChain项目开始于2016年，在2017年初正式全面启动。并于2017年8月份完成了全球社区众筹，是九四前创立的资深老项目之一。我们
+   坚信区块链是21世纪最伟大的发明，必将重构全球金融体系，引领人类迈入智能金融时代。</p>
+  <p></p>
+ </div>
+</div>
+
+<div class="fin" id="fin">
+ <div class="fin-bt wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+  <h2>应用场景</h2>
+ </div>
+ <div class="fin-nr wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+  <ul>
+
+   <!--所有的新闻单页列表信息-->
+
+
+   <li class="clearfix wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+    <div class="fin-nr-zf">
+     <h2>金融支付</h2>
+     <p>
+
+      金融的核心是信用的建立和传递，联商链充分运用区块链不可篡改、安全透明、去中心化或多中心化的特点在国际金融支付搭建落地，构建扁平化的全球一体化支付体系，以提高效率、降低成本。
+     </p>
+    </div>
+    <div class="fin-nr-yr">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/jrzf.png">
+    </div>
+   </li>
+
+
+   <li class="clearfix wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+    <div class="fin-nr-zf">
+     <h2>跨境支付</h2>
+     <p>
+
+      联商链将区块链技术运用到跨境支付领域，将传统金融机构、外汇做市商、流动性提供商等加入支付网络，构建成为支付网关。通过支付网关，可以将区块链上数字资产流动与现实中的法定货币相连接，实现法定货币与bafc转换，便于后续的支付转账，并连接传统做市商、汇出行、汇入行等机构，摒弃中间交易环节，实现点到点快速低成本支付。
+     </p>
+    </div>
+    <div class="fin-nr-yr">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/kjzf.png">
+    </div>
+   </li>
+
+
+   <li class="clearfix wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+    <div class="fin-nr-zf">
+     <h2>清算结算</h2>
+     <p>
+      交易清算/结算的过程也是交易双方分别记账的过程，联商链区块链系统，交易双方或多方可以共享一套可信、互认的账本，所有的交易清结算记录全部在链可查，安全透明、不可篡改、可追溯，极大提升对账准确度和效率。通过搭载智能合约，还可以实现自动执行的交易清结算，大大降低对账人员成本和差错率。
+     </p>
+    </div>
+    <div class="fin-nr-yr">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/qsjs.png">
+    </div>
+   </li>
+
+
+  </ul>
+
+
+ </div>
+</div>
+
+
+<div class="xfin wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+ <ul>
+
+  <!--所有的新闻单页列表信息-->
+
+
+  <li class="clearfix">
+   <div class="xfin-zf clearfix wow slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <div class="xfin-zf01">
+     <h2>商品溯源</h2>
+     <p>联商链利用区块链技术，通过智能合约搭建去中心化的云平台。基于合约完成溯源防伪码的验证、物流码的查询，联商链在利用区块链技术的同时，引入最新的物联网RFID技术和AI人工智能，从商品的源头入手，在商品开始设计之初便开始区块记录，到原料的采购，生产，组装，成型，装箱，发货等整个生产流程和销售流程全部上链记录，从根本上保证商品的真实安全，做到真正的防伪溯源。
+     </p>
+    </div>
+   </div>
+   <div class="xfin-yr clearfix wow slideInRight" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <div class="xfin-yr01">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/spsy.png">
+    </div>
+   </div>
+  </li>
+
+
+
+  <li class="clearfix">
+   <div class="xfin-zf clearfix wow slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <div class="xfin-zf01">
+     <h2>商品流通</h2>
+     <p>联商链运用区块链技术，充分发挥区块链技术的去中心化、可追溯不可篡改性等特征，将整个商品流通的过程上链，所有环节全部在区块链上记录解决，缩减中间不必要的环节，大大提高了商品流通的效率，同时也大大降低了商品的成本，对国际商品的流通具有着重大的推动作用。
+     </p>
+    </div>
+   </div>
+   <div class="xfin-yr clearfix wow slideInRight" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <div class="xfin-yr01">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/splt.png">
+    </div>
+   </div>
+  </li>
+
+
+
+ </ul>
+</div>
+
+<div class="sy-jsjg">
+ <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <h2>技术架构</h2>
+  <div class="sy-jsjg-bt01"></div>
+ </div>
+ <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <p>
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+
+  </p>
+ </div>
+
+ <div class="sy-jsjg-nr wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <ul class="clearfix">
+
+
+   <!--所有的新闻单页列表信息-->
+
+
+   <li class="wow www delay-03s" style="visibility: hidden; animation-name: none;">
+    <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/566a0458-bfb4-40bb-b17e-8a4be5e64304.png">
+    <h2>Pow+pos</h2>
+   </li>
+
+
+
+   <li class="wow www delay-03s" style="visibility: hidden; animation-name: none;">
+    <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/f4985ced-18ca-43d9-af81-30b4c925741d.png">
+    <h2>智能合约</h2>
+   </li>
+
+
+
+   <li class="wow www delay-03s" style="visibility: hidden; animation-name: none;">
+    <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/0ea293db-01dc-418c-b792-cf2a2b0b0214.jpg">
+    <h2>闪电网络</h2>
+   </li>
+
+  </ul>
+ </div>
+
+</div>
+
+<div class="sy-hxys" style="background: #0d4a9c;color: #ffffff">
+ <div class="sy-hxys01">
+  <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+   <h2 style="color: #ffffff">BAFC国际交易钱包</h2>
+  <!-- <div class="sy-jsjg-bt01"></div>-->
+  </div>
+  <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;color: #ffffff">
+   <p>
+
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
+   </p>
+   <p style="text-align: center; margin: 0 auto; font-stretch: normal; line-height: 25px;display:block;width:80%;text-align:left;color:#ffffff" >联商链充分利用区块链技术打造一款多功能的BAFC国际交易钱包，运用到国际贸易和商品流通之中，将整个生态系统植入到钱包之中，通过钱包的功能来更好的促进整个生态圈的建设。
+    <br></p>
+   <p style="text-align: center; margin: 0px; font-stretch: normal; line-height: normal;" pingfang="" sc="" color:="" rgb="" 69="" min-height:="" 17px=""><br></p>
+
+   <p>
+   </p>
+  </div>
+
+  <div class="sy-jsjg-nr clearfix wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+
+   <div class="sy-jsjg-nr-yr wow slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
+    <p><br></p><p><br></p>
+    <p>
+     <!--<img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/wallet.png" alt="">-->
+     <debris id="5"><img src="{$field.pic}" alt=""></debris>
+    </p>
+
+
+   </div>
+   <div class="sy-jsjg-nr-zf wow slideInRight" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <p>
+
+     <!--主要用于获取单条code信息，比如页脚，logo信息-->
+    </p>
+    <debris id="5">{$field.body}</debris>
+
+    <p></p>
+   </div>
+  </div>
+
+ </div>
+</div>
+
+<div class="sy-bps" id="bps">
+ <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <h2>白皮书</h2>
+  <div class="sy-jsjg-bt01"></div>
+ </div>
+ <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <p>
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+  </p><p style="margin: 0px; font-stretch: normal; line-height: normal; font-family: " pingfang="" sc="" color:="" rgb="" 69=""><span style="font-size:18px;">直接帮助那些生活在贫困中的人们</span></p><div><br></div>
+
+  <p></p>
+ </div>
+
+ <div class="sy-bps-nr clearfix wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+
+
+  <!--所有的新闻单页列表信息-->
+
+
+  <div class="sy-bps-nr-zf wow slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+   <img src="Default.aspx_files/51b80c17-487e-4781-89f4-f8b57c2a962f.jpg">
+  </div>
+  <div class="sy-bps-nr-yr wow slideInRight" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+   <p>
+    让每个用户都拥有数字资产是我们的使命和梦想，我们坚信<br>
+    只有普惠金融才能让区块链技术尽快大规模应用，造福所有人。
+   </p>
+   <a href="http://www.finchain.info/UserFiles/Article/bpsxz/709d2be0-af25-494c-8169-621a68f60d66.rar">阅读我们的白皮书</a>
+  </div>
+
+
+ </div>
+
+</div>
+
+<div class="sy-qbxz" id="qbxz">
+ <div class="sy-qbxz01">
+
+  <div class="sy-qbxz-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+   <h2>钱包下载</h2>
+   <div class="sy-qbxz-bt01"></div>
+  </div>
+  <div class="sy-qbxz-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+   <p>
+
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
+   </p><h2><span style="color:#ffffff;"><span style="font-size:18px;">真正赋予全世界每一个人拥有财富的权利</span></span></h2><br>
+
+   <p></p>
+  </div>
+
+  <div class="sy-qbxz-nr wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+   <ul class="clearfix">
+
+
+    <!--所有的新闻单页列表信息-->
+
+
+    <li>
+     <ul>
+      <li class="clearfix">
+
+       <div class="sy-qbxz-nrzf">
+        <a href="https://github.com/FinanceChainFoundation/FinChain-core/releases/download/v0.1.3/FinChain-Light-0.1.4.dmg">
+         <img src="Default.aspx_files/924aa6db-29ca-4b3c-b47b-df0ca2f7075c.png">
+         <h2>Mac</h2>
+        </a>
+       </div>
+       <div class="sy-qbxz-nryr">
+        <a href="https://github.com/FinanceChainFoundation/FinChain-core/releases/download/v0.1.3/FinChain-Light-0.1.4.dmg">
+         <p> version 1.4</p>
+        </a>
+       </div>
+
+      </li>
+     </ul>
+    </li>
+
+
+
+    <li>
+     <ul>
+      <li class="clearfix">
+
+       <div class="sy-qbxz-nrzf">
+        <a href="https://github.com/FinanceChainFoundation/FinChain-core/releases/download/v0.1.3/FinChain-Light-0.1.4.exe">
+         <img src="Default.aspx_files/a2f33e77-2716-4151-8fda-6cb04c27012c.png">
+         <h2>Windows</h2>
+        </a>
+       </div>
+       <div class="sy-qbxz-nryr">
+        <a href="https://github.com/FinanceChainFoundation/FinChain-core/releases/download/v0.1.3/FinChain-Light-0.1.4.exe">
+         <p>version 1.4 </p>
+        </a>
+       </div>
+
+      </li>
+     </ul>
+    </li>
+
+
+
+   </ul>
+  </div>
+
+  <div class="sy-qbxz-zn">
+   <a href="http://mp.weixin.qq.com/s/XnBb8LxIA4ddomm_lq2-dw">GUIDE</a>
+  </div>
+
+ </div>
+</div>
+
+<div class="sy-lxt">
+ <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <h2>路线图</h2>
+  <div class="sy-jsjg-bt01"></div>
+ </div>
+
+ <div class="sy-lxt-nr wow slideInRight animated" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+  <table>
+   <tbody><tr>
+    <th>日期</th>
+    <th>进展</th>
+    <th>社区</th>
+   </tr>
+
+
+
+   <!--所有的新闻单页列表信息-->
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2017-06</span>
+     </div>
+    </td>
+    <td>
+     <h2>FinChain 基金会成立</h2>
+    </td>
+    <td>
+     <p>10K +</p>
+    </td>
+   </tr>
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2017-08</span>
+     </div>
+    </td>
+    <td>
+     <h2>搭建FinChain底层框架</h2>
+    </td>
+    <td>
+     <p>15K +</p>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2017-10</span>
+     </div>
+    </td>
+    <td>
+     <h2>启动马尼拉海外运营中心</h2>
+    </td>
+    <td>
+     <p>37K +</p>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2017-12</span>
+     </div>
+    </td>
+    <td>
+     <h2>钱包v1.0.4 版本发布</h2>
+    </td>
+    <td>
+     <p>68K +</p>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2018-02</span>
+     </div>
+    </td>
+    <td>
+     <h2>资产募集功能发布</h2>
+    </td>
+    <td>
+     <p>500K +</p>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2018-03</span>
+     </div>
+    </td>
+    <td>
+     <h2>资产募集功能改进以及多重签名钱包上线</h2>
+    </td>
+    <td>
+     <p>550k+</p>
+    </td>
+   </tr>
+
+
+
+   </tbody></table>
+ </div>
+ <div class="sy-lxt-db">
+  <h2>敬请期待</h2>
+ </div>
+</div>
+
+<div class="sy-sq">
+ <div class="sy-sq01">
+  <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+   <h2>社区</h2>
+   <div class="sy-jsjg-bt01"></div>
+  </div>
+  <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+   <p>
+
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
+    在100多个国家拥有50万名用户
+
+   </p>
+  </div>
+  <div class="sy-jsjg-nr wow slideInLeft animated" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+   <img src="Default.aspx_files/9082cf4c-f8db-4968-9ed5-bd38eb011111.jpg" alt="">
+
+  </div>
+ </div>
+</div>
+
+<div class="sy-mt">
+ <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <h2>媒体</h2>
+  <div class="sy-jsjg-bt01"></div>
+ </div>
+ <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <p>
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+  </p><p style="margin: 0px; font-stretch: normal; line-height: normal; font-family: "><strong><span style="font-size:16px;">这是第一个有机会改变世界金融的公有链项目</span></strong></p>
+
+  <p></p>
+ </div>
+ <div class="sy-mt-nr wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <div id="scroll1" class="owl-carousel owl-theme owl-loaded">
+
+
+   <!--所有的新闻单页列表信息-->
+
+
+
+   <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1110px, 0px, 0px); transition: all 0s ease 0s; width: 3330px;"><div class="owl-item cloned" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=206">
+     <img src="Default.aspx_files/17458e65-3d62-4ada-ae9d-a9d25ab7e03c.jpg">
+     <div class="sy-mt-nr01">
+      <h2>FINCHAIN链上应用Bitman</h2>
+      <p>全世界普及量最大的币——比特超人Bitman，致力于让世界上每一个人都拥有自己的数字资产</p>
+     </div>
+    </a>
+   </div></div><div class="owl-item cloned" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=207">
+     <img src="Default.aspx_files/c4892427-94b3-4a7a-b0fa-32629f992696.jpg">
+     <div class="sy-mt-nr01">
+      <h2>金融链服务PPP项目</h2>
+      <p>金融链（Finchain）的理念与本届金融工作会议精神把更好地服务实体经济作为金融工作的出发点和落脚点完美契合。　　</p>
+     </div>
+    </a>
+   </div></div><div class="owl-item cloned" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=208">
+     <img src="Default.aspx_files/5bfc572c-db80-4bda-bafa-fd4a7fdab3b1.jpg">
+     <div class="sy-mt-nr01">
+      <h2>渡鸦区块链</h2>
+      <p>将优质资产数字化：他们想实现全球化的资产配置</p>
+     </div>
+    </a>
+   </div></div><div class="owl-item active" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=206">
+     <img src="Default.aspx_files/17458e65-3d62-4ada-ae9d-a9d25ab7e03c.jpg">
+     <div class="sy-mt-nr01">
+      <h2>FINCHAIN链上应用Bitman</h2>
+      <p>全世界普及量最大的币——比特超人Bitman，致力于让世界上每一个人都拥有自己的数字资产</p>
+     </div>
+    </a>
+   </div></div><div class="owl-item active" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=207">
+     <img src="Default.aspx_files/c4892427-94b3-4a7a-b0fa-32629f992696.jpg">
+     <div class="sy-mt-nr01">
+      <h2>金融链服务PPP项目</h2>
+      <p>金融链（Finchain）的理念与本届金融工作会议精神把更好地服务实体经济作为金融工作的出发点和落脚点完美契合。　　</p>
+     </div>
+    </a>
+   </div></div><div class="owl-item active" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=208">
+     <img src="Default.aspx_files/5bfc572c-db80-4bda-bafa-fd4a7fdab3b1.jpg">
+     <div class="sy-mt-nr01">
+      <h2>渡鸦区块链</h2>
+      <p>将优质资产数字化：他们想实现全球化的资产配置</p>
+     </div>
+    </a>
+   </div></div><div class="owl-item cloned" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=206">
+     <img src="Default.aspx_files/17458e65-3d62-4ada-ae9d-a9d25ab7e03c.jpg">
+     <div class="sy-mt-nr01">
+      <h2>FINCHAIN链上应用Bitman</h2>
+      <p>全世界普及量最大的币——比特超人Bitman，致力于让世界上每一个人都拥有自己的数字资产</p>
+     </div>
+    </a>
+   </div></div><div class="owl-item cloned" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=207">
+     <img src="Default.aspx_files/c4892427-94b3-4a7a-b0fa-32629f992696.jpg">
+     <div class="sy-mt-nr01">
+      <h2>金融链服务PPP项目</h2>
+      <p>金融链（Finchain）的理念与本届金融工作会议精神把更好地服务实体经济作为金融工作的出发点和落脚点完美契合。　　</p>
+     </div>
+    </a>
+   </div></div><div class="owl-item cloned" style="width: 340px; margin-right: 30px;"><div class="item">
+    <a href="http://www.finchain.info/NewsDetails.aspx?aid=208">
+     <img src="Default.aspx_files/5bfc572c-db80-4bda-bafa-fd4a7fdab3b1.jpg">
+     <div class="sy-mt-nr01">
+      <h2>渡鸦区块链</h2>
+      <p>将优质资产数字化：他们想实现全球化的资产配置</p>
+     </div>
+    </a>
+   </div></div></div></div>
+   <div class="owl-controls">
+    <div class="owl-nav">
+     <div class="owl-prev" style="">
+
+     </div>
+     <div class="owl-next" style=""></div>
+    </div>
+    <div style="" class="owl-dots">
+     <div class="owl-dot active"><span></span></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div class="sy-yxdy wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+ <div class="sy-yxdy01">
+  <div class="sy-qbxz-bt wow xz delay-03s" style="visibility: hidden; animation-name: none;">
+   <h2>邮箱订阅</h2>
+   <div class="sy-qbxz-bt01"></div>
+  </div>
+  <div class="sy-qbxz-gs">
+   <p>
+
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
+    订阅邮箱，获取最新资讯
+
+   </p>
+  </div>
+
+  <div class="sy-yxdy-nr clearfix">
+   <div class="sy-yxdy-nr-zf">
+    <input placeholder="您的姓名" id="teyname" type="text">
+   </div>
+   <div class="sy-yxdy-nr-yr">
+    <input placeholder="您的邮箱地址" id="s03" type="text">
+    <a id="aaaa">立即订阅</a>
+   </div>
+
+  </div>
+
+ </div>
+
+</div>
+
+
+<div class="wx-ewm">
+ <div class="wx-ewm01">
+  <p>扫一扫，关注我们</p>
+  <div class="">
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+   <img src="Default.aspx_files/e9246939-3965-4fb1-9f0c-206c4c328e2e.jpg" alt="">
+
+
+  </div>
+ </div>
+ <div class="wx-ewm-gb"></div>
+</div>
+
+<include file="Public:foot" />
