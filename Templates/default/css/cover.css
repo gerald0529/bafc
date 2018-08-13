@@ -327,11 +327,13 @@ body img{
     margin-top:15px;
 }
 .fin-nr ul li .fin-nr-yr{
-    width:273px;
+    /*width:273px;*/
+    width:357px;
     height:357px;
 }
 .fin-nr ul li .fin-nr-yr img{
-    width:273px;
+    /*width:273px;*/
+    width:357px;
     height:357px;
     display:block;
 }

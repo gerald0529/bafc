@@ -327,11 +327,13 @@ body img{
     margin-top:15px;
 }
 .fin-nr ul li .fin-nr-yr{
-    width:273px;
+    /*width:273px;*/
+    width:357px;
     height:357px;
 }
 .fin-nr ul li .fin-nr-yr img{
-    width:273px;
+    /*width:273px;*/
+    width:357px;
     height:357px;
     display:block;
 }
@@ -416,7 +418,8 @@ body img{
 .xfin ul li .xfin-zf .xfin-zf01{
     width:70%;
     box-sizing:border-box;
-    padding-top:100px;
+    /*padding-top:100px;*/
+    padding-bottom:100px;
 }
 .xfin ul li .xfin-zf .xfin-zf01 h2{
     font-size:24px;

@@ -34,7 +34,7 @@
      <?php $i=2;?>
      <channel type='top' >
      <li class="wow fadeInLeft animated" data-wow-delay="0.{$i}s" style="visibility: visible; animation-delay: 0.{$i}s; animation-name: fadeInLeft;">
-      <if condition="$field['cname_en'] neq 'news'">
+      <if condition="$field['cname_en'] neq 'News'">
        <a href="/#{$field.keywords}" >
         <else />
         <a  href="{$field.url}" >
@@ -468,7 +468,7 @@
 
 <div class="sy-mt">
  <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
-  <h2>媒体</h2>
+  <h2>新闻资讯</h2>
 
  </div>
  <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
@@ -487,8 +487,8 @@
      <a href="{$field.url}">
       <img src="{$field.pic}"/>
       <div class="sy-mt-nr01">
-       <h2>{$field.article_title|cms_substr="20"}</h2>
-       <p>{$field.keywords}</p>
+       <h2>{$field.article_title|cms_substr="12"}</h2>
+       <p>{$field.description|cms_substr="36"}</p>
       </div>
      </a>
     </div>
@@ -516,27 +516,34 @@
 <div class="sy-yxdy wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
  <div class="sy-yxdy01">
   <div class="sy-qbxz-bt wow xz delay-03s" style="visibility: hidden; animation-name: none;">
-   <h2>邮箱订阅</h2>
-   <div class="sy-qbxz-bt01"></div>
+   <h2>联系我们</h2>
+   <!--<div class="sy-qbxz-bt01"></div>-->
   </div>
   <div class="sy-qbxz-gs">
    <p>
 
     <!--主要用于获取单条code信息，比如页脚，logo信息-->
-    订阅邮箱，获取最新资讯
+    <!--订阅邮箱，获取最新资讯-->
 
    </p>
   </div>
 
-  <div class="sy-yxdy-nr clearfix">
-   <div class="sy-yxdy-nr-zf">
-    <input placeholder="您的姓名" id="teyname" type="text">
-   </div>
-   <div class="sy-yxdy-nr-yr">
-    <input placeholder="您的邮箱地址" id="s03" type="text">
-    <a id="aaaa">立即订阅</a>
-   </div>
+  <div class="sy-yxdy-nr clearfix" style="width: 55%;">
 
+
+<showad cid="12">
+   <div class="kk">
+    <img src="{$field.pic}"/>
+   </div>
+</showad>
+           <style>
+            .kk{width: 5rem;
+             float: left;
+             height: 50px;
+             padding: 1px;
+             box-sizing: border-box;
+             border-radius: 6px;}
+           </style>
   </div>
 
  </div>
@@ -544,18 +551,6 @@
 </div>
 
 
-<div class="wx-ewm">
- <div class="wx-ewm01">
-  <p>扫一扫，关注我们</p>
-  <div class="">
 
-   <!--主要用于获取单条code信息，比如页脚，logo信息-->
-   <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/e9246939-3965-4fb1-9f0c-206c4c328e2e.jpg" alt="">
-
-
-  </div>
- </div>
- <div class="wx-ewm-gb"></div>
-</div>
 
 <include file="Public:foot" />
