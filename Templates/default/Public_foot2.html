@@ -1,0 +1,53 @@
+ <div class="footer" style="position: relative;bottom: 0;">
+            <p>
+                
+<!--主要用于获取单条code信息，比如页脚，logo信息-->
+{$Think.Config.cfg_copyright}
+
+            </p>
+        </div>
+
+
+
+    </form>
+     
+
+    
+
+    <script>
+
+        $(".head-zyw .head-zyw-a01").click(function () {
+            $(".head-zyw .head-zyw-a02").hide();
+        });
+
+        $(".head-zyw .head-zyw-a02").click(function () {
+            $(".head-zyw .head-zyw-a01").show();
+        });
+
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $(".sjnavdh01-gb").click(function () {
+                $(".sjnavdh").animate({ left: '100%' });
+            });
+        });
+        $(document).ready(function () {
+            $(".sjnav").click(function () {
+                $(".sjnavdh").animate({ left: '0' });
+            });
+        });
+    </script>
+
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 100
+        });
+        wow.init();
+  </script>
+
+</body>
+</html>

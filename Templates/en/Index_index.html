@@ -1,148 +1,559 @@
 <include file="Public:head" />
-<div id="fullPage">
- <div class="section page1" style="overflow: hidden;">
+<div class="banner">
+
+ <div class="">
+
+
+  <!--所有的新闻单页列表信息-->
+
   <showad cid="1">
-  <img src="{$field.pic}" class="home_bg" />
+  <div class="banner01" style="background: rgba(0, 0, 0, 0) url({$field.pic}) no-repeat scroll center center / cover; height: 926px;"></div>
   </showad>
-  <div class="home_con">
-   <showad cid="13">
-   <img src="{$field.pic}" class="home_img1 wow  fadeInRight" data-wow-delay="0.2s" />
-   <img src="{$field.pic_en}" class="home_img2 wow  fadeInRight" data-wow-delay="0.4s" />
-   </showad>
-  </div>
-  <div id="particles-js"></div>
+
  </div>
- <div class="section page2">
-  <debris id="1">
-  <img src="{$field.pic}" class="page2_bg" />
-  </debris>
-  <div class="page2_con">
-   <debris id="1">
-   <div class="Pic_List_title">{$field.title_en}</div>
-   </debris>
-   <div class="JieShao_Cont wow fadeInLeft">
-    <debris id="1">
-    <p>{$field.body_en}</p>
-    </debris>
-    <ul class="JieShao_a" style="margin-top: 60px;">
-     <channel type='son' cid="1">
-     <li>
-      <a href="" target="_blank">{$field.cname_en}</a>
+ <div class="banner-nr">
+  <div class="head clearfix">
+   <div class="logo" style="margin-left:8rem;">
+    <a href="/">
+
+     <!--主要用于获取单条code信息，比如页脚，logo信息-->
+     <img src="__ROOT__/{$Think.Config.cfg_logo}" alt="" style="width:80px;">
+
+
+    </a>
+   </div>
+   <div class="head-zyw">
+
+    <a class="head-zyw-a01" href="/?t=default">Chinese</a>
+
+   </div>
+   <div class="nav">
+    <ul class="clearfix">
+     <li class="wow fadeInLeft animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+      <a href="/">Home</a></li>
+     <?php $i=2;?>
+     <channel type='top' >
+     <li class="wow fadeInLeft animated" data-wow-delay="0.{$i}s" style="visibility: visible; animation-delay: 0.{$i}s; animation-name: fadeInLeft;">
+      <if condition="$field['cname_en'] neq 'news'">
+       <a href="/#{$field.keywords}" >
+        <else />
+        <a  href="{$field.url}" >
+      </if>
+       {$field.cname_en}</a>
      </li>
+      <?php $i++;?>
      </channel>
+
     </ul>
-
-   </div>
-   <div class="lightbox video wow fadeInRight">
-    <debris id="5">
-    <img src="{$field.pic}" class="mp4_cilck" style="display: block;">
-    </debris>
-    <div class="mp4" style="display: none; width: 500px;margin-top: -120px; ">
-     <video id="video" width="400" height="500" controls="controls" loop="loop">
-      <source src="public/MP4/ffbb.mp4" media="only screen and (min-device-width: 568px)"></source>
-      <source src="public/MP4/ffbb.mp4" media="only screen and (max-device-width: 568px)"></source>
-      <source src="public/MP4/ffbb.ogv"></source>
-     </video>
-    </div>
-
    </div>
   </div>
+
+  <div class="banner-zi wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+   <h2>Business alliance financial circle,BAFC</h2>
+   <p>Create a new generation of international business alliance ecosystem</p>
+   <ul class="clearfix">
+    <li><a href="javascript:void (0);" target="_blank">GIT-Hub</a></li>
+    <li><a href="javascript:void (0);" target="_blank">BLOCK-Explorer</a></li>
+   </ul>
+  </div>
+
  </div>
+ <div class="banner-fx wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+  <ul class="clearfix">
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_04.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_05.png"> </a></li>
+   <li class="banner-fxwx"><a href="javascript:void (0);"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_06.png"> </a></li>
+   <li class="banner-fxqq"><a href="javascript:void (0);"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_07.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_08.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_09.png"> </a></li>
+  </ul>
+ </div>
+</div>
 
- <div class="section page3">
-  <showad cid="10">
-  <div class="slide">
-   <img src="{$field.pic}" alt="" />
-  </div>
+
+<div class="sj-banner">
+
+ <div class="">
+
+
+  <!--所有的新闻单页列表信息-->
+
+  <showad cid="1">
+  <div class="banner01" style="background: rgba(0, 0, 0, 0) url(&quot;{$field.pic}&quot;) no-repeat scroll center center / cover; height: 926px;"></div>
   </showad>
- </div>
- <div class="section page4">
-  <div class="page4_con">
-   <div class="page4_title">Haha chain core technology</div>
-   <ul class="lightbox_table ">
-    <?php $i=1;?>
-    <showad cid="9">
-     <if condition="$i eq 1">
-     <li class=" wow fadeInRight">
-      <img src="{$field.pic}" alt="" />
-     </li>
-      <elseif condition="$i eq 2"/>
-      <li class=" wow fadeIn" style="margin:  0 140px;">
-       <img src="{$field.pic}" alt="" />
-      </li>
-       <else />
-      <li class=" wow fadeInLeft">
-       <img src="{$field.pic}" alt="" />
-      </li>
-     </if>
-     <?php $i++;?>
-    </showad>
-
-
-   </ul>
-   <div style="font-size: 40px;">
-    Development route
-   </div>
-   <div class="path">
-    <debris id="4"><img src="{$field.pic}" class="path_bg" /></debris>
-    <showad cid="14">
-     <?php //P($field);?>
-     <if condition="$field['name'] eq 1">
-        <span class=" wow fadeInLeft technology technology{$field.name}" data-wow-delay="0.{$field.name}s">{$field.info}</span>
-      <else />
-      <span class=" wow fadeInRight technology technology{$field.name}" data-wow-delay="0.{$field.name}s">{$field.info}</span>
-     </if>
-    </showad>
-
-   </div>
-  </div>
 
  </div>
- <div class="section">
-  <div class="page5_con">
-   <div class="page4_title" style="color: #000000;font-size: 40px;">Cooperation Agency</div>
-   <div class="wrapper">
-    <ul>
-     <showad cid="2">
-     <li>
-      <div class='picBox'>
-       <div class='show'>
-        <image height='50px' width='180px' src='{$field.pic}'></image>
-       </div>
-       <div class='hide'>
-        <h3>JBC</h3>
-       </div>
-      </div>
-     </li>
-     </showad>
 
-
-
-    </ul>
-   </div>
-
-  </div>
+ <div class="sj-banner-zi">
+  <h2>分布式智能金融平台</h2>
+  <p>智能金融＝智能众筹＋交易所＋Token银行</p>
  </div>
- <div class="section page6">
-  <div class="page5_con">
-   <div class="page4_title" style="color: #ffffff;font-size: 40px;">Contact us</div>
-   <ul class="page6_ul">
 
-    <showad cid="12">
-     <if condition="$field['name'] neq 8">
-    <li>
-     <img src="{$field.pic}" alt="" />
+ <div class="sj-banner-an">
+  <ul class="clearfix">
+   <li><a href="javascript:void (0);" target="_blank">GIT-Hub</a></li>
+   <li><a href="javascript:void (0);" target="_blank">BLOCK-Explorer</a></li>
+  </ul>
+ </div>
+
+ <div class="sj-banner-fx">
+  <ul class="clearfix">
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_04.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_05.png"> </a></li>
+   <li class="banner-fxwx"><a href="javascript:void (0);"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_06.png"> </a></li>
+   <li class="banner-fxqq"><a href="javascript:void (0);"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_07.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_08.png"> </a></li>
+   <li><a href="javascript:void (0);" target="_blank"> <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/cq90_09.png"> </a></li>
+  </ul>
+ </div>
+
+</div>
+
+
+<div class="sj-gs wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+
+ <div class="sj-gs01" style="">
+
+  <p>
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+  </p>
+  <p>Business alliance financial circle,abbreviated as BAFC,initiated by the BAFC foundation of the Australian, jointly organized by commercial alliances around the world to solve the problems in current international financial and trade, and to build a new generation of international business alliance ecosphere, so as to promote the rapid development of international trade and economic globalization.</p>
+  <p></p>
+ </div>
+</div>
+
+<div class="fin" id="fin">
+ <div class="fin-bt wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+  <h2>Application scene</h2>
+ </div>
+ <div class="fin-nr wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+  <ul>
+
+   <!--所有的新闻单页列表信息-->
+
+
+   <li class="clearfix wow fadeInUp delay-03s animated" style="visibility: visible; animation-name: fadeInUp;">
+    <div class="fin-nr-zf">
+     <h2>Financial payment</h2>
+     <p>
+
+      The core of finance is the establishment and transmission of credit. Linkage chain makes full use of the characteristics of unfalsifiable, safe, transparent, decentralized or multi-centralized block chain in international financial payment, and builds a flat global payment system to improve efficiency and reduce costs.
+     </p>
+    </div>
+    <div class="fin-nr-yr">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/jrzf.png">
+    </div>
+   </li>
+
+
+   <li class="clearfix wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+    <div class="fin-nr-zf">
+     <h2>Cross-border payment</h2>
+     <p>
+Linkage chain applies block chain technology to cross-border payment, and builds payment gateway by adding traditional financial institutions, foreign exchange market makers, liquidity providers and so on. Through the payment gateway, the digital asset flow on the block chain can be linked with the real legal tender, and the legal tender and bafc can be converted to facilitate the subsequent payment and transfer. The traditional market maker, outward remittance bank, inward remittance bank and other institutions can be connected, and the intermediate transaction link can be abandoned to achieve point-to-point rapid and low-cost payment.
+     </p>
+    </div>
+    <div class="fin-nr-yr">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/kjzf.png">
+    </div>
+   </li>
+
+
+   <li class="clearfix wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+    <div class="fin-nr-zf">
+     <h2>Liquidation and settlement</h2>
+     <p>
+     The process of clearing and settling transactions is also the process of recording accounts separately between the two parties. The linked chain block chain system enables the two or more parties to share a set of credible and mutually recognized accounts. All the clearing and settling records are traceable in the chain, which is safe, transparent, unauthorized and traceable, greatly improving the accuracy and efficiency of reconciliation. By carrying intelligent contracts, automatic transaction clearing and settlement can be achieved, which greatly reduces the cost of reconciliation personnel and error rate.
+     </p>
+    </div>
+    <div class="fin-nr-yr">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/qsjs.png">
+    </div>
+   </li>
+
+
+  </ul>
+
+
+ </div>
+</div>
+
+
+<div class="xfin wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+ <ul>
+
+  <!--所有的新闻单页列表信息-->
+
+
+  <li class="clearfix">
+   <div class="xfin-zf clearfix wow slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <div class="xfin-zf01">
+     <h2>Trace to the source of goods</h2>
+     <p>The alliance chain uses block chain technology to build a centralized cloud platform through intelligent contracts. Based on the contract to complete the verification of traceability anti-counterfeiting codes and the inquiry of logistics codes, the consulting chain introduces the latest Internet of Things RFID technology and AI artificial intelligence while making use of the block chain technology. Starting from the source of the commodity, the consulting chain begins block recording at the beginning of the design of the commodity, and then proceeds to the purchase, production, assembly, molding and packing of raw materials. The whole production process and sales process, such as delivery, are all recorded on the chain, which fundamentally guarantees the real safety of the goods and achieves the real anti-counterfeiting traceability.
+     </p>
+    </div>
+   </div>
+   <div class="xfin-yr clearfix wow slideInRight" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <div class="xfin-yr01">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/spsy.png">
+    </div>
+   </div>
+  </li>
+
+
+
+  <li class="clearfix">
+   <div class="xfin-zf clearfix wow slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <div class="xfin-zf01" >
+     <h2>Commodity circulation</h2>
+     <p>By using the block chain technology and making full use of the features of the block chain technology, such as decentralization, traceability and unusurpable modification, the whole process of commodity circulation is linked up and all links are recorded and solved in the block chain, thus reducing the unnecessary links in the middle, greatly improving the efficiency of commodity circulation, and at the same time greatly reducing the efficiency of commodity circulation. The cost of commodities plays a significant role in promoting the circulation of international commodities.
+     </p>
+    </div>
+   </div>
+   <div class="xfin-yr clearfix wow slideInRight" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <div class="xfin-yr01">
+     <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/splt.png">
+    </div>
+   </div>
+  </li>
+
+
+
+ </ul>
+</div>
+
+<div class="sy-jsjg" id="bps">
+ <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <h2>Technical architecture</h2>
+  <div class="sy-jsjg-bt01"></div>
+ </div>
+ <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <p>
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+
+  </p>
+ </div>
+
+ <div class="sy-jsjg-nr wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <ul class="clearfix">
+
+
+   <!--所有的新闻单页列表信息-->
+
+
+   <showad cid="17">
+    <li class="wow www delay-03s" style="visibility: hidden; animation-name: none;">
+     <img src="{$field.pic_en}">
+     <h2>{$field.name_en}</h2>
     </li>
-      <else />
-      <li style="margin-right: 0;">
-       <img src="{$field.pic}" alt="" />
-      </li>
-     </if>
-    </showad>
-   </ul>
+   </showad>
+
+  </ul>
+ </div>
+
+</div>
+
+<div class="sy-hxys" style="background: #0d4a9c;color: #ffffff">
+ <div class="sy-hxys01">
+  <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+   <h2 style="color: #ffffff">BAFC International transaction Wallet</h2>
+  <!-- <div class="sy-jsjg-bt01"></div>-->
+  </div>
+  <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;color: #ffffff">
+   <p>
+
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
+   </p>
+   <p style="text-align: center; margin: 0 auto; font-stretch: normal; line-height: 25px;display:block;width:80%;text-align:left;color:#ffffff" >
+    <br></p>
+   <p style="text-align: center; margin: 0px; font-stretch: normal; line-height: normal;" pingfang="" sc="" color:="" rgb="" 69="" min-height:="" 17px=""><br></p>
+
+   <p>
+   </p>
+  </div>
+
+  <div class="sy-jsjg-nr clearfix wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+
+   <div class="sy-jsjg-nr-yr wow slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
+    <p> <br></p><p><br></p>
+    <p>
+     <!--<img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/wallet.png" alt="">-->
+     <debris id="5"><img src="{$field.pic}" alt=""></debris>
+    </p>
+
+
+   </div>
+   <div class="sy-jsjg-nr-zf wow slideInRight" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+    <p style="color:#ffffff;text-align:left;">
+     Chain makes full use of the block chain technology to create a multi-functional BAFC international trading wallet, applied to international trade and commodity circulation, the entire ecosystem into the wallet, through the function of the wallet to better promote the construction of the entire ecosphere.
+     <!--主要用于获取单条code信息，比如页脚，logo信息-->
+    </p>
+    <div style="border:0px solid #000;">
+    <debris id="5">{$field.body_en}</debris>
+    </div>
+    <p></p>
+   </div>
+  </div>
+
+ </div>
+</div>
+
+<div class="sy-bps"  id="qbxz">
+ <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <h2>white paper</h2>
+  <!--<div class="sy-jsjg-bt01"></div>-->
+ </div>
+ <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <p>
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+  </p><p style="margin: 0px; font-stretch: normal; line-height: normal; font-family: " pingfang="" sc="" color:="" rgb="" 69=""><span style="font-size:18px;"></span></p><div><br></div>
+
+  <p></p>
+ </div>
+
+ <div class="sy-bps-nr clearfix wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+
+
+  <!--所有的新闻单页列表信息-->
+
+  <debris id="4">
+  <div class="sy-bps-nr-zf wow slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+   <img src="{$field.pic_en}">
+  </div>
+  <div class="sy-bps-nr-yr wow slideInRight" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+   <p>
+    {$field.body_en}
+
+   </p>
+   <a href="http://www.finchain.info/UserFiles/Article/bpsxz/709d2be0-af25-494c-8169-621a68f60d66.rar">Reading our white paper</a>
+  </div>
+  </debris>
+
+ </div>
+
+</div>
+
+
+
+<div class="sy-lxt">
+ <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <h2>road map</h2>
+  <div class="sy-jsjg-bt01"></div>
+ </div>
+
+ <div class="sy-lxt-nr wow slideInRight animated" data-wow-duration="1.3s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 1.3s; animation-delay: 0.6s; animation-name: none;">
+  <table>
+   <tbody><tr>
+    <th>date</th>
+    <th>Progress</th>
+    <th>Community</th>
+   </tr>
+
+
+
+   <!--所有的新闻单页列表信息-->
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2018-06</span>
+     </div>
+    </td>
+    <td>
+     <h2>Alliance chain BAFC foundation was established, BAFC project approval；</h2>
+    </td>
+    <td>
+     <p>6K +</p>
+    </td>
+   </tr>
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2018-08</span>
+     </div>
+    </td>
+    <td>
+     <h2>White paper, official website completed；</h2>
+    </td>
+   <td>
+     <p>10K +</p>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2018-08</span>
+     </div>
+    </td>
+    <td>
+     <h2>Open subscription (internal scheduling)；</h2>
+    </td>
+    <td>
+     <p>12K+</p>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2018-9</span>
+     </div>
+    </td>
+    <td>
+     <h2>Community building；</h2>
+    </td>
+    <td>
+     <p>15K +</p>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2018-8~9</span>
+     </div>
+    </td>
+    <td>
+     <h2> On-line international exchange；</h2>
+    </td>
+    <td>
+     <p>30K +</p>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+     <div class="sy-lxt-nrrq">
+      <span>2018-08</span>
+     </div>
+    </td>
+    <td>
+     <h2>BAFC Multi currency international transaction Wallet；</h2>
+    </td>
+    <td>
+     <p>50k+</p>
+    </td>
+   </tr>
+
+
+
+   </tbody></table>
+ </div>
+ <div class="sy-lxt-db">
+  <h2>........</h2>
+ </div>
+</div>
+
+
+
+<div class="sy-mt">
+ <div class="sy-jsjg-bt wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <h2>media</h2>
+
+ </div>
+ <div class="sy-jsjg-gs wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+
+ </div>
+ <div class="sy-mt-nr wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+  <div id="scroll1" class="owl-carousel owl-theme owl-loaded">
+
+
+   <!--所有的新闻单页列表信息-->
+
+   <!--<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1110px, 0px, 0px); transition: all 0s ease 0s; width: 3330px;">-->
+
+   <artlist cid="20" row='3' flag="c">
+    <div class="item">
+     <a href="{$field.url}">
+      <img src="{$field.pic}"/>
+      <div class="sy-mt-nr01">
+       <h2>{$field.article_title_en|cms_substr="20"}</h2>
+       <p>{$field.keywords_en}</p>
+      </div>
+     </a>
+    </div>
+   </artlist>
+
+
+
+   </div></div>
+   <div class="owl-controls">
+    <div class="owl-nav">
+     <div class="owl-prev" style="">
+
+     </div>
+     <div class="owl-next" style=""></div>
+    </div>
+    <div style="" class="owl-dots">
+     <div class="owl-dot active"><span></span></div>
+    </div>
+   </div>
   </div>
  </div>
 </div>
 
-</body>
+
+<div class="sy-yxdy wow fadeInUp delay-03s" style="visibility: hidden; animation-name: none;">
+ <div class="sy-yxdy01">
+  <div class="sy-qbxz-bt wow xz delay-03s" style="visibility: hidden; animation-name: none;">
+   <h2>Mailbox subscription</h2>
+   <div class="sy-qbxz-bt01"></div>
+  </div>
+  <div class="sy-qbxz-gs">
+   <p>
+
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
+    Subscribe to mailboxes for latest information
+
+   </p>
+  </div>
+
+  <div class="sy-yxdy-nr clearfix">
+   <div class="sy-yxdy-nr-zf">
+    <input placeholder="您的姓名" id="teyname" type="text">
+   </div>
+   <div class="sy-yxdy-nr-yr">
+    <input placeholder="您的邮箱地址" id="s03" type="text">
+    <a id="aaaa">Instant subscriptions</a>
+   </div>
+
+  </div>
+
+ </div>
+
+</div>
+
+
+<div class="wx-ewm">
+ <div class="wx-ewm01">
+  <p>Sweep and pay attention to us</p>
+  <div class="">
+
+   <!--主要用于获取单条code信息，比如页脚，logo信息-->
+   <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/e9246939-3965-4fb1-9f0c-206c4c328e2e.jpg" alt="">
+
+
+  </div>
+ </div>
+ <div class="wx-ewm-gb"></div>
+</div>
+
 <include file="Public:foot" />

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--主要用于获取单条code信息，比如页脚，logo信息-->
+
+<title>
+  
+</title><link href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/cover.css" rel="stylesheet" />
+    <script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/jquery-1.9.1.js"></script>
+
+    <link href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/animate.css" rel="stylesheet" />
+    <script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/wow.js"></script>
+    
+    
+   
+   
+
+    <script type="text/javascript">
+        function SetLanguage(language) {
+
+            $.post("/ashx/IceSnow.ashx", { lang: language },
+                function () {
+                    location.reload()
+                });
+        }
+    </script>
+    <script type="text/javascript">
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                }
+                catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        //设为首页 <a onclick="SetHome(this,window.location)">设为首页</a>
+        function SetHome(obj, vrl) {
+            try {
+                obj.style.behavior = 'url(#default#homepage)'; obj.setHomePage(vrl);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    }
+                    catch (e) {
+                        alert("此操作被浏览器拒绝！\n请手动添加。");
+                    }
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                    prefs.setCharPref('browser.startup.homepage', vrl);
+                }
+            }
+        }
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".side01 ul li").hover(function () {
+                $(this).find(".sidebox").stop().animate({ "width": "124px" }, 200).css({ "opacity": "1", "filter": "Alpha(opacity=100)", "background": "#ae1c1c" })
+            }, function () {
+                $(this).find(".sidebox").stop().animate({ "width": "54px" }, 200).css({ "opacity": "0.8", "filter": "Alpha(opacity=80)", "background": "#000" })
+            });
+
+        });
+
+        //回到顶部
+        function goTop() {
+            $('html,body').animate({ 'scrollTop': 0 }, 600);
+        }
+</script>
+<meta name="description" /><meta name="keywords" /><meta name="description" content="全世界普及量最大的币——比特超人Bitman，致力于让世界上每一个人都拥有自己的数字资产" /><meta name="keywords" /></head>
+
+
+
+<body>
+    <form method="post" action="./NewsDetails.aspx?aid=206" id="form1" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<div class="aspNetHidden">
+
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="35C1B557" />
+</div>
+    
+
+        
+
+        <div class="sjhead clearfix">
+            <div class="sjlogo">
+                <a href="Default.aspx">
+                    
+<!--主要用于获取单条code信息，比如页脚，logo信息-->
+<img src="__ROOT__/{$Think.Config.cfg_logo}" alt="" />
+
+                    
+                </a>
+            </div>
+
+            <div class="sjnav">
+                <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/an_nav01.png" />
+            </div>
+        </div>
+                                              
+        <div class="sjnavdh">
+            <div class="sjnavdh01">
+                <ul>
+                   <!--  <li><a href="Default.aspx">首页</a></li>
+                   <li><a href="Default.aspx#fin">科技</a></li>
+                   <li><a href="Default.aspx#bps">白皮书</a></li>
+                   <li><a href="Default.aspx#qbxz">下载</a></li>
+                   <li><a href="AboutUs.aspx">关于我们</a></li>
+                   <li><a href="Default.aspx?l=zh-cn">中文</a></li>
+                   <li><a href="Default.aspx?l=en-us">English</a></li> -->
+                </ul>
+
+                <div class="sjnavdh01-gb"></div>
+
+                <div class="sjnavdh01-logo">
+                    
+                    
+<!--主要用于获取单条code信息，比如页脚，logo信息-->
+<img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/039905e0-b1b4-4a8a-a1b7-d0301fdad206.png" alt="" />
+
+                </div>
+            </div>
+        </div>
+
+
+
+<div class="banner">
+
+<div class="banner-gywm">
+           
+
+<!--所有的新闻单页列表信息-->
+
+ 
+ <showad cid="5">
+        <div class="banner-gywm01" style="background:url({$field.pic}) no-repeat center center;background-size:cover;" >
+
+        </div>
+  </showad>
+             
+            
+        </div>
+        <div class="banner-nr">
+            <div class="head clearfix">
+                <div class="logo">
+                    <a href="/">
+                        
+<!--主要用于获取单条code信息，比如页脚，logo信息-->
+<img src="__ROOT__/{$Think.Config.cfg_logo}" alt="" style="width:80px;"/>
+
+                        
+                    </a>
+                </div>
+                <div class="head-zyw">
+                    
+                    <a class="head-zyw-a01" href="/?t=default">Chinese</a>
+                   
+                </div>
+                <div class="nav">
+                    <ul class="clearfix">
+                        <li class="wow fadeInLeft" data-wow-delay="0.1s"><a href="/">Home</a></li>
+                        
+    <?php $i=2;?>
+     <channel type='top' >
+     <li class="wow fadeInLeft" data-wow-delay="0.{$i}s">
+      <if condition="$field['cname_en'] neq 'news'">
+       <a href="/#{$field.keywords}" >
+        <else />
+        <a  href="{$field.url}" >
+      </if>
+       {$field.cname_en}</a>
+     </li>
+      <?php $i++;?>
+       </channel>
+                    </ul>
+                </div>
+            </div>           
+
+        </div>
+        
+    </div>

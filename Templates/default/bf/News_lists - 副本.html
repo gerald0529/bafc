@@ -1,0 +1,192 @@
+<include file="Public:head2" />
+
+
+
+    <div class="banner">
+
+       <div class="banner-gywm">
+           
+
+
+<!--所有的新闻单页列表信息-->
+
+ 
+ <showad cid="5">
+        <div class="banner-gywm01" style="background:url({$field.pic}) no-repeat center center;background-size:cover;height:17rem;" >
+
+            <!-- <div class="banner-nyzi wow fadeInUp delay-03s">
+                <h2>分布式智能金融平台</h2>
+                <p>智能金融＝智能众筹＋交易所＋Token银行</p>
+            </div> -->
+        </div>
+  </showad>
+    
+
+           
+            
+            
+        </div>
+        <div class="banner-nr">
+            <div class="head clearfix">
+                <div class="logo">
+                    <a href="Default.aspx">
+                        
+<!--主要用于获取单条code信息，比如页脚，logo信息-->
+<img src="__ROOT__/{$Think.Config.cfg_logo}" alt="" style="width:80px;"/>
+
+                        
+                    </a>
+                </div>
+                <div class="head-zyw">
+                    
+                    <a class="head-zyw-a01" href="/?t=en">English</a>
+                   
+                </div>
+                <div class="nav">
+                    <ul class="clearfix">
+                        <li class="wow fadeInLeft" data-wow-delay="0.1s"><a href="/">首页</a></li>
+                        
+    <?php $i=2;?>
+     <channel type='top' >
+     <li class="wow fadeInLeft" data-wow-delay="0.{$i}s">
+      <if condition="$field['cname_en'] neq 'news'">
+       <a href="/#{$field.keywords}" >
+        <else />
+        <a  href="{$field.url}" >
+      </if>
+       {$field.cname}</a>
+     </li>
+      <?php $i++;?>
+       </channel>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+        </div>
+        
+    </div>
+
+   <div class="wx-ewm">
+        <div class="wx-ewm01">
+            <p>扫一扫，关注我们</p>
+            <div class="">
+                
+<!--主要用于获取单条code信息，比如页脚，logo信息-->
+<img src="/UserFiles/Xheditor/e9246939-3965-4fb1-9f0c-206c4c328e2e.jpg" alt="" />
+
+            
+            </div>
+        </div>
+        <div class="wx-ewm-gb"></div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.banner-fxwx').click(function () {
+                $('.wx-ewm').stop(true, true).slideToggle();
+            });
+            $('.wx-ewm-gb').click(function () {
+                $('.wx-ewm').stop(true, true).slideToggle();
+            })
+        })
+    </script>
+
+    <div class="qq-ewm">
+        <div class="qq-ewm01">
+            <p>扫一扫，关注我们</p>
+            <div class="">
+                
+<!--主要用于获取单条code信息，比如页脚，logo信息-->
+<img src="/UserFiles/Xheditor/83c17996-809a-4699-b7be-615a20b0188c.jpg" alt="" />
+
+            
+            </div>
+        </div>
+        <div class="qq-ewm-gb"></div>
+    </div>
+    <script>
+        $(function () {
+            $('.banner-fxqq').click(function () {
+                $('.qq-ewm').stop(true, true).slideToggle();
+            });
+            $('.qq-ewm-gb').click(function () {
+                $('.qq-ewm').stop(true, true).slideToggle();
+            })
+        })
+    </script>
+
+    
+
+    <div class="sj-banner01">
+        
+
+<!--所有的新闻单页列表信息-->
+        
+        <div class="sj-gywmban" style="background:url(/UserFiles/Article/nyban/68d73b5c-535e-4c8b-b4c9-023482d61f02.jpg) no-repeat center center;background-size:cover;">
+            <div class="sj-banner-zi">
+                <h2>分布式智能金融平台1111 </h2>
+                <p>智能金融＝智能众筹＋交易所＋Token银行</p>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="newsxq">
+
+        
+
+<!--详情页面的信息：一般用于产品详情页面和新闻详情等页面，可以灵活应用-->
+ 
+
+ 
+<div class="newsxq-bt">
+    <h2>新闻资讯</h2>
+   
+</div>
+
+<div class="newsxq-nr">
+   <div class="wrapper2" >
+         <ul>
+          <pagelist >
+           <li >
+
+             <p >>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$field.url}" >{$field.article_title|cms_substr="25"}
+              <span style="float:right;margin-left:10%;">{$field.addtime}</span>
+             </a></p>
+
+           </li>
+          </pagelist>
+
+         </ul>
+        </div>
+           <div class="pp">
+               <page />
+           </div>
+
+</div>
+
+</div>
+ <style>
+      .wrapper2{max-width:60%;margin:0 auto; }
+      .wrapper2 li{
+       text-align: left;
+       position: relative;
+       width: 100%;
+       height: 50px;
+       list-style: none;
+       margin: 5px;
+       display: inline-block;
+       perspective: 50px;
+      }
+       .pp{
+           margin-top:5%;
+           font-size: small;
+           color:#000;
+       }
+     </style>
+
+    
+<include file='Public:foot2'/>

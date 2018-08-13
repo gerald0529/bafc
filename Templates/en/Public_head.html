@@ -1,40 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--主要用于获取单条code信息，比如页脚，logo信息-->
 
-<head>
-    <meta charset="UTF-8">
-    <title>{$cms.page_title}</title>
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/animation.css" />
-    <link rel="stylesheet" href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/jquery.fullPage.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/index_fullpage.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/demo.css" />
+    <title>
+        {$cms.page_title}
+    </title>
+    <link href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/cover.css" rel="stylesheet">
+    <link href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/owl.css" rel="stylesheet">
+    <link href="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/css/animate.css" rel="stylesheet">
 
-</head>
+    <script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/wow.js"></script>
+    <script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/jquery-2.js"></script>
+    <script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/owl.js"></script>
+    <script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/jquery-1.js"></script>
 
-<body style="min-width: 1200px;">
-<div class="header">
-    <ul id="menu">
-        <img src="__ROOT__/{$Think.Config.cfg_logo}" alt="" class="logo" />
-        <li data-menuanchor="page1" <if condition='CONTROLLER_NAME eq "News"'>style="color:#ffffff" </if>>
-            <a href="#page1">Home</a>
-        </li>
-        <channel type='top' >
-        <li data-menuanchor="{$field.keywords}" <if condition='CONTROLLER_NAME eq "News"'>class="active" </if>>
-            <if condition="$field['cname_en'] neq 'news'">
-            <a href="/#{$field.keywords}">
-                <else />
-                <a  href="{$field.url}">
-            </if>
-                {$field.cname_en|cms_substr="14"}
+    <script type="text/javascript">
+        $(function () {
+            $('.owl-carousel').owlCarousel({
+                items: 3,
+                loop: true,
+                nav: true,
+                navText: ['', ''],
+                margin: 30,
+                autoPlay: true,
+                navigation: true,
+                //navigationText: ["", ""],
+                scrollPerPage: true,
+                pagination: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    },
+                }
+            });
+        })
+    </script>
+
+
+    <script>
+        $(function () {
+            //锚点跳转滑动效果
+            $('a[href*=#],area[href*=#]').click(function () {
+                console.log(this.pathname)
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body').animate({
+                                scrollTop: targetOffset
+                            },
+                            500);
+                        return false;
+                    }
+                }
+            });
+        })
+    </script>
+
+
+
+    <script type="text/javascript">
+        function SetLanguage(language) {
+
+            $.post("/ashx/IceSnow.ashx", { lang: language },
+                function () {
+                    location.reload()
+                });
+        }
+    </script>
+    <script type="text/javascript">
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                }
+                catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        //设为首页 <a onclick="SetHome(this,window.location)">设为首页</a>
+        function SetHome(obj, vrl) {
+            try {
+                obj.style.behavior = 'url(#default#homepage)'; obj.setHomePage(vrl);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    }
+                    catch (e) {
+                        alert("此操作被浏览器拒绝！\n请手动添加。");
+                    }
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                    prefs.setCharPref('browser.startup.homepage', vrl);
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".side01 ul li").hover(function () {
+                $(this).find(".sidebox").stop().animate({ "width": "124px" }, 200).css({ "opacity": "1", "filter": "Alpha(opacity=100)", "background": "#ae1c1c" })
+            }, function () {
+                $(this).find(".sidebox").stop().animate({ "width": "54px" }, 200).css({ "opacity": "0.8", "filter": "Alpha(opacity=80)", "background": "#000" })
+            });
+
+        });
+
+        //回到顶部
+        function goTop() {
+            $('html,body').animate({ 'scrollTop': 0 }, 600);
+        }
+    </script>
+    <meta name="description">
+    <meta name="keywords">
+    </head>
+
+
+
+<body>
+<form method="post" action="./Default.aspx" id="form1" enctype="multipart/form-data">
+    <div class="aspNetHidden">
+        <input name="__VIEWSTATE" id="__VIEWSTATE"
+               value="" type="hidden">
+    </div>
+
+    <div class="aspNetHidden">
+
+        <input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" type="hidden">
+    </div>
+
+
+
+
+    <div class="sjhead clearfix">
+        <div class="sjlogo">
+            <a href="/">
+
+                <!--主要用于获取单条code信息，比如页脚，logo信息-->
+                <img src="__ROOT__/{$Think.Config.cfg_logo}" alt="">
+
             </a>
-        </li>
-        </channel>
+        </div>
 
-        <li style="float: right;">
-            <a href="/?t=default">
-                <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/zh_en.png" class="zh_en" />
-            </a>
-        </li>
-    </ul>
-</div>
+        <div class="sjnav">
+            <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/an_nav01.png">
+        </div>
+    </div>
+
+    <div class="sjnavdh">
+        <div class="sjnavdh01">
+            <ul>
+               <!--  <li><a href="http://www.finchain.info/Default.aspx">首页111</a></li>
+               <li><a href="http://www.finchain.info/Default.aspx#fin">科技</a></li>
+               <li><a href="http://www.finchain.info/Default.aspx#bps">白皮书</a></li>
+               <li><a href="http://www.finchain.info/Default.aspx#qbxz">下载</a></li>
+               <li><a href="http://www.finchain.info/AboutUs.aspx">关于我们</a></li>
+               <li><a href="http://www.finchain.info/Default.aspx?l=zh-cn">中文</a></li>
+               <li><a href="http://www.finchain.info/Default.aspx?l=en-us">English</a></li> -->
+            </ul>
+
+            <div class="sjnavdh01-gb"></div>
+
+            <div class="sjnavdh01-logo">
+
+
+                <!--主要用于获取单条code信息，比如页脚，logo信息-->
+                <img src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/images/039905e0-b1b4-4a8a-a1b7-d0301fdad206.png" alt="">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

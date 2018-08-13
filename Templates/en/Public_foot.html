@@ -1,101 +1,125 @@
-<script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/jquery.fullPage.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/particles.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/demo.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/wow.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-    $(function() {
-
+<script>
+    $(function () {
+        $('.banner-fxwx').click(function () {
+            $('.wx-ewm').stop(true, true).slideToggle();
+        });
+        $('.wx-ewm-gb').click(function () {
+            $('.wx-ewm').stop(true, true).slideToggle();
+        })
     })
 </script>
-<script type="text/javascript">
-    $(function() {
 
-        //全屏3滚动
-        $('#fullPage').fullpage({
-            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#0d3575', '#ffffff', '#0d3575'],
-            anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
-            menu: '#menu',
-            css3: true,
-            scrollingSpeed: 1000,
-            scrollBar: true,
-            afterRender: function() {
-                //设置滚动到该页面后执行动画
-                wow = new WOW({
-                    animateClass: 'animated',
-                });
-                wow.init();
-            }
+<div class="qq-ewm">
+    <div class="qq-ewm01">
+        <p>扫一扫，关注我们</p>
+        <div class="">
 
+            <!--主要用于获取单条code信息，比如页脚，logo信息-->
+            <img src="Default.aspx_files/83c17996-809a-4699-b7be-615a20b0188c.jpg" alt="">
+
+
+        </div>
+    </div>
+    <div class="qq-ewm-gb"></div>
+</div>
+<script>
+    $(function () {
+        $('.banner-fxqq').click(function () {
+            $('.qq-ewm').stop(true, true).slideToggle();
         });
-        //狄三平轮播
-        setInterval(function() {
-            console.log(0)
-            $.fn.fullpage.moveSlideRight();
-
-        }, 5000);
-
-        //星云
-        particlesJS('particles-js', {
-            particles: {
-                color: '#fff',
-                shape: 'circle', // "circle", "edge" or "triangle"
-                opacity: 0.8,
-                size: 3,
-                size_random: true,
-                nb: 120,
-                line_linked: {
-                    enable_auto: true,
-                    distance: 100,
-                    color: '#fff',
-                    opacity: 1,
-                    width: 1,
-                    condensed_mode: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 600
-                    }
-                },
-                anim: {
-                    enable: true,
-                    speed: 1
-                }
-            },
-            interactivity: {
-                enable: true,
-                mouse: {
-                    distance: 300
-                },
-                detect_on: 'canvas', // "canvas" or "window"
-                mode: 'grab',
-                line_linked: {
-                    opacity: .3
-                },
-                events: {
-                    onclick: {
-                        enable: true,
-                        mode: 'push', // "push" or "remove"
-                        nb: 4
-                    }
-                }
-            },
-            /* Retina Display Support */
-            retina_detect: true
-        });
-        //播放视频
-        $(".mp4_cilck").click(function() {
-            $(".mp4_cilck").hide();
-            $(".mp4").show();
-            $(".video").find("video")[0].play();
-        });
-        $("#video").toggle(function() {
-            console.log("000")
-            $(".video").find("video")[0].pause();
-        }, function() {
-            $(".video").find("video")[0].play();
+        $('.qq-ewm-gb').click(function () {
+            $('.qq-ewm').stop(true, true).slideToggle();
         })
+    })
+</script>
 
+
+<script>
+    $(function () {
+        $("#aaaa").click(function () {
+
+
+            //if (!myreg.test($("#txtEmail").val())) {
+            //    alert('提示\n\n请输入有效的E_mail！');
+
+            //    return false;
+            //}
+            //if ($("#txtTelephone").val() == '')
+            //{ alert("请填写您的电话！"); return false; }
+            //if (!/^1[34578]\d{9}$/.test($("#txtTelephone").val())) {
+            //    alert('手机号错误,请填写正确的手机号码!');
+            //    return false;
+            //}
+            if ($("#s03").val() == '')
+            { alert("请填写您的邮箱！"); return false; }
+
+
+            $.post("/ashx/ajaxHelp.ashx", { action: 'AddMessage', tc: "m", name: $("#teyname").val(), phone: $("#txtTelephone").val(), s03: $("#s03").val(), s04: $("#s04").val() },
+                function (data) {
+                    if (data == 1) {
+                        alert("订阅成功");
+                        window.location.href = "Default.aspx";
+                    }
+                });
+
+        });
     });
 </script>
 
-</html>
+
+<script>
+    $(function () {
+        var s =
+            $(window).height();
+        $(".banner01").css("height", s);
+    })
+</script>
+
+
+<div class="footer">
+    <p>
+
+        <!--主要用于获取单条code信息，比如页脚，logo信息-->
+        {$Think.Config.cfg_copyright}
+
+    </p>
+</div>
+
+</form>
+
+<script>
+
+    $(".head-zyw .head-zyw-a01").click(function () {
+        $(".head-zyw .head-zyw-a02").hide();
+    });
+
+    $(".head-zyw .head-zyw-a02").click(function () {
+        $(".head-zyw .head-zyw-a01").show();
+    });
+
+</script>
+<script>
+    $(document).ready(function () {
+        $(".sjnavdh01-gb").click(function () {
+            $(".sjnavdh").animate({ left: '100%' });
+        });
+    });
+    $(document).ready(function () {
+        $(".sjnav").click(function () {
+            $(".sjnavdh").animate({ left: '0' });
+        });
+    });
+</script>
+
+<script>
+    wow = new WOW({
+        animateClass: 'animated',
+        offset: 100
+    });
+    wow.init();
+</script>
+
+<script charset="utf-8" async="true" src="__PUBLIC__/{$Think.Config.DEFAULT_THEME}/js/jquery.js"></script>
+
+
+</body></html>
